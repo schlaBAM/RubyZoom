@@ -1,0 +1,45 @@
+team:
+  - name: Vancouver Canucks
+    arena: Rogers Arena
+    division: Pacific
+    games_played: 49
+    record: 27-18-4
+    points: 58
+
+player:
+  forward:
+    - name: Brock Boeser
+      position: RW
+      goals: 16
+      assists: 27
+      points: 43
+    - name: Elias Pettersson
+      position: C
+      goals: 21
+      assists: 30
+      points: 51
+    - name: JT Miller
+      position: LW
+      goals: 17
+      assists: 29
+      points: 46
+
+  defense:
+    - name: Quinn Hughes
+      position: LD
+      goals: 5
+      assists: 29
+      points: 34
+      blocks: 31
+
+  goalie:
+    - name: Jacob Markstrom
+      wins: 18
+      losses: 13
+      shots_against: 1081
+      saves: 990
+      save_percentage: 0.916
+      goals_against_average: 2.71
+      goals: 0
+      assists: 1
+      points: 1
