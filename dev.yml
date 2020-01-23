@@ -2,36 +2,35 @@ up:
   - ruby: 2.5.0
   - bundler
 
-team:
-  - name: Vancouver Canucks
-    arena: Rogers Arena
-    division: Pacific
-    games_played: 49
-    record: 27-18-4
-    points: 58
-
-player:
-  skater:
-    - name: Brock Boeser
-      position: RW
-      goals: 22
-      assists: 24
-      points: 46
-    - name: Elias Pettersson
-      position: C
-      goals: 28
-      assists: 33
-      points: 61
-  goalie:
-    - name: Jacob Markstrom
-      wins: 18
-      losses: 13
-      shots_against: 1081
-      saves: 990
-      save_percentage: 0.916
-      goals_against_average: 2.71
-      goals: 0
-      assists: 1
-      points: 1
-
+#team:
+#  - name: Vancouver Canucks
+#    arena: Rogers Arena
+#    division: Pacific
+#    games_played: 49
+#    record: 27-18-4
+#    points: 58
+#
+#player:
+#  skater:
+#    - name: Brock Boeser
+#      position: RW
+#      goals: 22
+#      assists: 24
+#      points: 46
+#    - name: Elias Pettersson
+#      position: C
+#      goals: 28
+#      assists: 33
+#      points: 61
+#  goalie:
+#    - name: Jacob Markstrom
+#      wins: 18
+#      losses: 13
+#      shots_against: 1081
+#      saves: 990
+#      save_percentage: 0.916
+#      goals_against_average: 2.71
+#      goals: 0
+#      assists: 1
+#      points: 1
 
