@@ -14,21 +14,21 @@ class TestDefense < Minitest::Test
     @defense.each do |player|
       player.keys.each do |key|
         puts "#{key}: #{player[key]}"
-        refute player[key].nil?
+        refute_nil player[key]
       end
     end
 
     @defense[0]['goals'] = nil
-    assert @defense[0]['goals'].nil?
+    assert_nil @defense[0]['goals']
   end
 
 def test_has_no_hits
-  assert @defense[0]['hits'].nil?
+  assert_nil @defense[0]['hits']
 end
 
   def test_is_skater_defense
     position = @defense[1]['position'].upcase
-    assert position == 'LD' || position == 'RD'
+    assert_includes %w(LD RD), position
   end
 
   # checks list to ensure team has a LD and RD to make a pair.
@@ -37,7 +37,7 @@ end
     @defense.each do |player|
       pair.delete(player['position'])
     end
-    assert pair.empty?
+    assert_empty pair
   end
 
   def test_add_defense
