@@ -1,14 +1,16 @@
 class Player
-  attr_reader :name, :number, :position
-  attr_accessor :goals, :assists, :points
+  attr_reader :name, :position
+  attr_accessor :goals, :assists
 
-  def initialize (name, number, position, goals, assists)
+  def initialize (name, position, goals, assists)
     @name = name
-    @number = number
     @position = position
     @goals = goals
     @assists = assists
-    @points = goals + assists
+  end
+
+  def total_points
+    @goals + @assists
   end
 
 end

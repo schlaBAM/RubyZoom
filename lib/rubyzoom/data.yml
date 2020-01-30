@@ -1,0 +1,199 @@
+Team:
+  -
+    name: Vancouver Canucks
+    division: Pacific
+    record: 27-18-4
+    position: 3
+  -
+    name: St Louis Blues
+    division: Central
+    record: 30-12-8
+    position: 1
+  -
+    name: Colorado Avalanche
+    division: Central
+    record: 28-15-6
+    position: 2
+  -
+    name: Dallas Stars
+    division: Central
+    record: 28-18-4
+    position: 4
+  -
+    name: Edmonton Oilers
+    division: Pacific
+    record: 26-18-5
+    position: 5
+  -
+    name: Calgary Flames
+    division: Pacific
+    record: 26-19-5
+    position: 6
+  -
+    name: Arizona Coyotes
+    division: Pacific
+    record: 26-20-5
+    position: 7
+  -
+    name: Vegas Golden Knights
+    division: Pacific
+    record: 25-20-7
+    position: 8
+  -
+    name: Winnipeg Jets
+    division: Central
+    record: 25-22-4
+    position: 9
+  -
+    name: Chicago Blackhawks
+    division: Central
+    record: 24-21-6
+    position: 10
+  -
+    name: Minnesota Wild
+    division: Central
+    record: 23-21-6
+    position: 11
+  -
+    name: Nashville Predators
+    division: Central
+    record: 22-19-7
+    position: 12
+  -
+    name: San Jose Sharks
+    division: Pacific
+    record: 22-25-4
+    position: 13
+  -
+    name: Anaheim Ducks
+    division: Pacific
+    record: 19-25-5
+    position: 14
+  -
+    name: LA Kings
+    division: Pacific
+    record: 18-27-5
+    position: 15
+
+Skater:
+  -
+    name: Brock Boeser
+    position: RW
+    goals: 16
+    assists: 27
+    shots: 153
+  -
+    name: Elias Pettersson
+    position: C
+    goals: 21
+    assists: 30
+    shots: 127
+  -
+    name: JT Miller
+    position: LW
+    goals: 17
+    assists: 29
+    shots: 123
+  -
+    name: Loui Eriksson
+    position: RW
+    goals: 5
+    assists: 4
+    shots: 37
+  -
+    name: Bo Horvat
+    position: C
+    goals: 17
+    assists: 26
+    shots: 132
+  -
+    name: Tanner Pearson
+    position: LW
+    goals: 14
+    assists: 23
+    shots: 126
+  -
+    name: Jake Virtanen
+    position: RW
+    goals: 14
+    assists: 16
+    shots: 102
+  -
+    name: Adam Gaudette
+    position: C
+    goals: 8
+    assists: 13
+    shots: 52
+  -
+    name: Antoine Roussel
+    position: LW
+    goals: 5
+    assists: 3
+    shots: 27
+  -
+    name: Tyler Motte
+    position: RW
+    goals: 3
+    assists: 2
+    shots: 26
+  -
+    name: Jay Beagle
+    position: C
+    goals: 1
+    assists: 3
+    shots: 37
+  -
+    name: Brandon Sutter
+    position: LW
+    goals: 5
+    assists: 3
+    shots: 49
+
+  -
+    name: Quinn Hughes
+    position: LD
+    goals: 6
+    assists: 29
+    shots: 90
+  -
+    name: Chris Tanev
+    position: RD
+    goals: 2
+    assists: 14
+    shots: 34
+  -
+    name: Alex Edler
+    position: LD
+    goals: 4
+    assists: 17
+    shots: 81
+  -
+    name: Tyler Myers
+    position: RD
+    goals: 4
+    assists: 11
+    shots: 102
+  -
+    name: Jordie Benn
+    position: LD
+    goals: 0
+    assists: 6
+    shots: 50
+  -
+    name: Troy Stecher
+    position: RD
+    goals: 3
+    assists: 6
+    shots: 55
+
+Goalie:
+  -
+    name: Jacob Markstrom
+    position: G
+    wins: 18
+    losses: 13
+    shots_against: 1081
+    saves: 990
+    goals: 0
+    assists: 1
+    points: 1

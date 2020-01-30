@@ -17,6 +17,11 @@ class TestTeam < Minitest::Test
     end
   end
 
+  #data file not in order.
+  def test_teams_sorted_by_position
+    refute_equal @teams, @teams.sort_by { |team| team['position'] }
+  end
+
   def test_complete_team
     #Test team for complete roster (12 forwards, 6 defense, 1 goalie)
   end

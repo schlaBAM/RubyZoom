@@ -6,33 +6,43 @@ class GeneralManager
 
   def initialize(name, team)
     @name = name
-    @team = generate_team(team)
+    @teams = generate_teams
+    @team = get_team(team)
   end
 
-  def generate_team(team_name)
+  def generate_teams
     # grab team from YML file with info on team.
     # on initialization team class will generate players
     # team sent to this function will choose from enum of teams to ensure string match.
-    teams =
-        [
-    Team.new('Vancouver Canucks', 'Rogers Arena', 'Pacific', '28-18-4', 1),
-    Team.new('Edmonton Oilers', 'Rogers Place', 'Pacific', '26-18-5', 2),
-    Team.new('Calgary Flames', 'Scotiabank Saddledome', 'Pacific', '26-19-5', 3),
-    Team.new('Arizona Coyotes', 'Gila River Arena', 'Pacific', '26-20-5', 4),
-    Team.new('Vegas Golden Knights', 'T-Mobile Arena', 'Pacific', '25-20-7', 5),
-    Team.new('San Jose Sharks', 'SAP Center', 'Pacific', '22-25-4', 6),
-    Team.new('Anaheim Ducks', 'Honda Center', 'Pacific', '19-25-5', 7),
-    Team.new('LA Kings', 'Staples Center', 'Pacific', '18-27-5', 8)
+    [
+        Team.new('St Louis Blues', 'Enterprise Center', 'Central', '30-12-8', 1),
+        Team.new('Colorado Avalanche', 'Pepsi Center', 'Central', '28-15-6', 2),
+        Team.new('Vancouver Canucks', 'Rogers Arena', 'Pacific', '28-18-4', 3),
+        Team.new('Dallas Stars', 'American Airlines Center', 'Central', '28-18-4', 4),
+        Team.new('Edmonton Oilers', 'Rogers Place', 'Pacific', '26-18-5', 5),
+        Team.new('Calgary Flames', 'Scotiabank Saddledome', 'Pacific', '26-19-5', 6),
+        Team.new('Arizona Coyotes', 'Gila River Arena', 'Pacific', '26-20-5', 7),
+        Team.new('Vegas Golden Knights', 'T-Mobile Arena', 'Pacific', '25-20-7', 8),
+        Team.new('Winnipeg Jets', 'Bell MTS Place', 'Central', '25-22-4', 9),
+        Team.new('Chicago Blackhawks', 'United Center', 'Central', '24-21-6', 10),
+        Team.new('Minnesota Wild', 'Xcel Energy Center', 'Central', '23-21-6', 11),
+        Team.new('Nashville Predators', 'Bridgestone Arena', 'Central', '22-19-7', 12),
+        Team.new('San Jose Sharks', 'SAP Center', 'Pacific', '22-25-4', 13),
+        Team.new('Anaheim Ducks', 'Honda Center', 'Pacific', '19-25-5', 14),
+        Team.new('LA Kings', 'Staples Center', 'Pacific', '18-27-5', 15)
     ]
 
-    teams.each_with_index do |index, team|
+  end
+
+  def get_team(team_name)
+    @teams.each_with_index do |index, team|
       if team.name == team_name
-        return teams[index]
+        return @teams[index]
       end
     end
 
-    #it'll never hit here because of data control but for safety:
-    teams[0]
+    # it'll never hit here because of data control but for safety:
+    @teams[0]
   end
 
 end
@@ -53,6 +63,13 @@ removal of X requires check to ensure team stats are still met (roster numbers, 
 CRUD: player stats, coach stats, team stats (including individual players / coaches)
 
 GM - fire coach, trade player, ??
+
+Collection ideas:
+
+Partition: currently_in_playoffs? partition 8 teams that are currently in the playoffs
+Map: ezpz
+Reduce: get_total_team_points - grab each player's point totals and return result.
+Select: find_best_scorer - select highest point getter on team
 
 easter egg commands to get fined / fired etc
 
