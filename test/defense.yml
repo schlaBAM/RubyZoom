@@ -1,7 +1,13 @@
-hughes:
-  name: Quinn Hughes
-  position: LD
-  goals: 5
-  assists: 29
-  points: 34
-  blocks: 31
+Defense:
+  -
+    name: Quinn Hughes
+    position: LD
+    goals: 5
+    assists: 29
+    points: 34
+  -
+    name: Jack Hughes
+    position: RD
+    goals: 2
+    assists: 25
+    points: 27

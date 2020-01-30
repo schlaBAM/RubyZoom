@@ -1,21 +1,110 @@
-boeser:
-  name: Brock Boeser
-  position: RW
-  goals: 16
-  assists: 27
-  points: 43
+Skater:
+  -
+    name: Brock Boeser
+    position: RW
+    goals: 16
+    assists: 27
+    points: 43
+  -
+    name: Elias Pettersson
+    position: C
+    goals: 21
+    assists: 30
+    points: 51
+  -
+    name: JT Miller
+    position: LW
+    goals: 17
+    assists: 29
+    points: 46
+  -
+    name: Brock Boeser
+    position: RW
+    goals: 16
+    assists: 27
+    points: 43
+  -
+    name: Elias Pettersson
+    position: C
+    goals: 21
+    assists: 30
+    points: 51
+  -
+    name: JT Miller
+    position: LW
+    goals: 17
+    assists: 29
+    points: 46
+  -
+    name: Brock Boeser
+    position: RW
+    goals: 16
+    assists: 27
+    points: 43
+  -
+    name: Elias Pettersson
+    position: C
+    goals: 21
+    assists: 30
+    points: 51
+  -
+    name: JT Miller
+    position: LW
+    goals: 17
+    assists: 29
+    points: 46
+  -
+    name: Brock Boeser
+    position: RW
+    goals: 16
+    assists: 27
+    points: 43
+  -
+    name: Elias Pettersson
+    position: C
+    goals: 21
+    assists: 30
+    points: 51
+  -
+    name: JT Miller
+    position: LW
+    goals: 17
+    assists: 29
+    points: 46
 
-pettersson:
-  name: Elias Pettersson
-  position: C
-  goals: 21
-  assists: 30
-  points: 51
-
-miller:
-  name: JT Miller
-  position: LW
-  goals: 17
-  assists: 29
-  points: 46
-
+  -
+    name: Quinn Hughes
+    position: LD
+    goals: 5
+    assists: 29
+    points: 34
+  -
+    name: Jack Hughes
+    position: RD
+    goals: 2
+    assists: 25
+    points: 27
+  -
+    name: Quinn Hughes
+    position: LD
+    goals: 5
+    assists: 29
+    points: 34
+  -
+    name: Jack Hughes
+    position: RD
+    goals: 2
+    assists: 25
+    points: 27
+  -
+    name: Quinn Hughes
+    position: LD
+    goals: 5
+    assists: 29
+    points: 34
+  -
+    name: Jack Hughes
+    position: RD
+    goals: 2
+    assists: 25
+    points: 27
