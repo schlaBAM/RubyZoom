@@ -14,5 +14,9 @@ module Rubyzoom
 
     register :Example, 'example', 'rubyzoom/commands/example'
     register :Help,    'help',    'rubyzoom/commands/help'
+    register :PlayoffRace, 'playoff_race', 'rubyzoom/commands/playoff_race'
+    register :PlayerStats, 'player_stats', 'rubyzoom/commands/player_stats'
+    register :BadPlayers, 'bad_players', 'rubyzoom/commands/bad_players'
+    register :RandomFacts, 'random_facts', 'rubyzoom/commands/random_facts'
   end
 end

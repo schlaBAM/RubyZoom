@@ -1,10 +1,18 @@
 require 'rubyzoom'
+require_relative '../../../lib/rubyzoom/catalogue'
+
 
 module Rubyzoom
   module Commands
     class Help < Rubyzoom::Command
       def call(args, _name)
-        puts CLI::UI.fmt("{{bold:Available commands}}")
+
+        catalogue = Catalogue.new
+
+        puts "- Welcome to Be A GM -"
+        puts "Welcome back, Jim Benning. As General Manager of the Vancouver Canucks, here are the current standings:"
+        puts catalogue.print_current_standings
+        puts CLI::UI.fmt("\n{{bold:Available commands}}:")
         puts ""
 
         Rubyzoom::Commands::Registry.resolved_commands.each do |name, klass|

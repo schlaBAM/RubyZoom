@@ -1,18 +1,21 @@
+require_relative 'skater'
+require_relative '../rubyzoom/goalie'
 
 class Team
-  attr_reader :name, :division
-  attr_accessor :arena, :current_record, :standings_position
+  attr_reader :name, :division, :players
+  attr_accessor :arena, :record, :standings_position
 
   def initialize (name, division, record, position)
     @name = name
     @division = division
     @record = record
     @standings_position = position
+    @players = []
     @players = generate_players
   end
 
   def generate_players
-    skaters = YAML.load_file('data.yml')
+    skaters = YAML.load_file('lib/rubyzoom/data.yml')
 
     skaters['Skater'].each do |skater|
       @players.push(Skater.new(skater['name'], skater['position'], skater['goals'], skater['assists'], skater['shots']))
@@ -42,7 +45,7 @@ class Team
 
   #TODO - improve + call check_roster_size
   def remove_player(player_name)
-    @players.each_with_index do |index, player|
+    @players.each_with_index do |player, index|
       if player.name == player_name
         @players.delete_at(index)
         break
