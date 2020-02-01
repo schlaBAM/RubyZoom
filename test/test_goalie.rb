@@ -3,23 +3,45 @@ require 'test_helper'
 class TestGoalie < Minitest::Test
 
   def setup
-    @goalie = YAML.load_file('test/goalie.yml')
-    @goalie = @goalie['markstrom']
+    @data = YAML.load_file('test/goalie.yml')['markstrom']
+    @goalie = Goalie.new(@data['name'], @data['position'], @data['goals'], @data['assists'], @data['wins'],
+                         @data['losses'], @data['saves'], @data['shots_against'])
   end
 
-  # test for is an instance of player / is valid match
+  def test_attributes
+    refute_nil @goalie.name, 'name cant be nil'
+    assert_kind_of String, @goalie.name, 'name must be of type String'
 
-  def test_valid_shots_against
-    assert_kind_of Integer, @goalie['shots_against'], "shots against must be an integer"
-  end
+    refute_nil @goalie.position, 'position cant be nil'
+    assert_kind_of String, @goalie.position, 'position must be of type String'
 
-  def test_valid_save_percentage
-    assert_kind_of Float, @goalie['save_percentage']
+    refute_nil @goalie.goals, 'goals cant be nil'
+    assert_kind_of Integer, @goalie.goals, 'goals must be of type Integer'
+
+    refute_nil @goalie.assists, 'assists cant be nil'
+    assert_kind_of Integer, @goalie.assists, 'assists must be of type Integer'
+
+    refute_nil @goalie.wins, 'goals cant be nil'
+    assert_kind_of Integer, @goalie.wins, 'wins must be of type Integer'
+
+    refute_nil @goalie.losses, 'losses cant be nil'
+    assert_kind_of Integer, @goalie.losses, 'losses must be of type Integer'
+
+    refute_nil @goalie.saves, 'saves cant be nil'
+    assert_kind_of Integer, @goalie.saves, 'saves must be of type Integer'
+
+    refute_nil @goalie.shots_against, 'shots cant be nil'
+    assert_kind_of Integer, @goalie.shots_against, 'shots must be of type Integer'
+
   end
 
   def test_save_stats_accurate
-    assert_equal (@goalie['saves'].to_f / @goalie['shots_against']).round(3), @goalie['save_percentage'],
+    assert_equal (@goalie.saves.to_f / @goalie.shots_against).round(3), @goalie.save_percentage,
                  "saves/shots against must equal save percentage"
+  end
+
+  def test_total_points
+    assert_equal @goalie.total_points, @data['points']
   end
 
 end

@@ -13,4 +13,8 @@ class Player
     @goals + @assists
   end
 
+  def to_s
+    "#{@name} (#{@goals}G, #{@assists}A, #{total_points}P)\n"
+  end
+
 end
