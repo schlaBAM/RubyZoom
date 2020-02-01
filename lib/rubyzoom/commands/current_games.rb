@@ -1,4 +1,5 @@
 require 'rubyzoom'
+require 'NHLGem'
 
 module Rubyzoom
   module Commands
@@ -6,6 +7,7 @@ module Rubyzoom
 
       def call(_args, _name)
         #TODO: implement gem + call check_games
+        puts NHLGem.check_games
       end
 
       def self.help
