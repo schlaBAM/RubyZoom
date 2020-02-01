@@ -11,7 +11,7 @@ class Catalogue
     generate_teams(file)
     @teams = @teams.sort_by{ |team| team.standings_position}
     @team = generate_team
-    @free_agents = generate_free_agents
+      #@free_agents = generate_free_agents
   end
 
 
@@ -19,8 +19,7 @@ class Catalogue
   def playoff_standings
     result = @teams.partition { |team| team.standings_position <= 8 }
 
-    "\nCurrently in playoff position:\n#{teams_to_string(result[0])}
-On the outside looking in:\n#{teams_to_string(result[1])}"
+    "\nCurrently in playoff position:\n#{teams_to_string(result[0])}\nOn the outside looking in:\n#{teams_to_string(result[1])}"
   end
 
   def best_team
@@ -87,8 +86,8 @@ On the outside looking in:\n#{teams_to_string(result[1])}"
     result
   end
 
-  def generate_free_agents
-    #TODO - data still needs to be created
-  end
+  #def generate_free_agents
+  #  #TODO - data still needs to be created
+  #end
 
 end
