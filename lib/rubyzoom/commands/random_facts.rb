@@ -8,10 +8,9 @@ module Rubyzoom
       def call(args, _name)
         catalog = Catalogue.new
         puts "\n----- Random Facts -----"
-        puts "Top team in the league: #{catalog.get_best_team}"
-        puts "\nPacific Division teams (by overall conference placing):\n#{catalog.get_teams_from('Pacific')}"
-        puts "\nCentral Division teams (by overall conference placing):\n#{catalog.get_teams_from('Central')}"
-
+        puts "Top team in the league: #{catalog.best_team}"
+        puts "\nPacific Division teams (by overall conference placing):\n#{catalog.teams_from('Pacific')}"
+        puts "\nCentral Division teams (by overall conference placing):\n#{catalog.teams_from('Central')}"
       end
 
       def self.help

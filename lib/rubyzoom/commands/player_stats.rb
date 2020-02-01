@@ -8,8 +8,8 @@ module Rubyzoom
       def call(_args, _name)
         catalog = Catalogue.new
         puts "Player stats:"
-        puts "Collectively this season, #{catalog.team.name} players have scored #{catalog.get_team_total_player_points} points."
-        puts "Top scorer: #{catalog.get_best_player}"
+        puts "Collectively this season, #{catalog.team.name} players have scored #{catalog.team_total_player_points} points."
+        puts "Your current top scorer is #{catalog.best_player}"
       end
 
       def self.help

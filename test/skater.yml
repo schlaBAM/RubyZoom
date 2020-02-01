@@ -5,106 +5,107 @@ Skater:
     goals: 16
     assists: 27
     points: 43
+    shots: 153
   -
     name: Elias Pettersson
     position: C
     goals: 21
     assists: 30
-    points: 51
+    shots: 127
   -
     name: JT Miller
     position: LW
     goals: 17
     assists: 29
-    points: 46
+    shots: 123
   -
-    name: Brock Boeser
+    name: Loui Eriksson
     position: RW
-    goals: 16
-    assists: 27
-    points: 43
+    goals: 5
+    assists: 4
+    shots: 37
   -
-    name: Elias Pettersson
+    name: Bo Horvat
     position: C
-    goals: 21
-    assists: 30
-    points: 51
-  -
-    name: JT Miller
-    position: LW
     goals: 17
-    assists: 29
-    points: 46
+    assists: 26
+    shots: 132
   -
-    name: Brock Boeser
+    name: Tanner Pearson
+    position: LW
+    goals: 14
+    assists: 23
+    shots: 126
+  -
+    name: Jake Virtanen
     position: RW
-    goals: 16
-    assists: 27
-    points: 43
+    goals: 14
+    assists: 16
+    shots: 102
   -
-    name: Elias Pettersson
+    name: Adam Gaudette
     position: C
-    goals: 21
-    assists: 30
-    points: 51
+    goals: 8
+    assists: 13
+    shots: 52
   -
-    name: JT Miller
+    name: Antoine Roussel
     position: LW
-    goals: 17
-    assists: 29
-    points: 46
+    goals: 5
+    assists: 3
+    shots: 27
   -
-    name: Brock Boeser
+    name: Tyler Motte
     position: RW
-    goals: 16
-    assists: 27
-    points: 43
+    goals: 3
+    assists: 2
+    shots: 26
   -
-    name: Elias Pettersson
+    name: Jay Beagle
     position: C
-    goals: 21
-    assists: 30
-    points: 51
+    goals: 1
+    assists: 3
+    shots: 37
   -
-    name: JT Miller
+    name: Brandon Sutter
     position: LW
-    goals: 17
-    assists: 29
-    points: 46
+    goals: 5
+    assists: 3
+    shots: 49
 
   -
     name: Quinn Hughes
     position: LD
-    goals: 5
+    goals: 6
     assists: 29
-    points: 34
+    shots: 90
   -
-    name: Jack Hughes
+    name: Chris Tanev
     position: RD
     goals: 2
-    assists: 25
-    points: 27
+    assists: 14
+    shots: 34
   -
-    name: Quinn Hughes
+    name: Alex Edler
     position: LD
-    goals: 5
-    assists: 29
-    points: 34
+    goals: 4
+    assists: 17
+    shots: 81
   -
-    name: Jack Hughes
+    name: Tyler Myers
     position: RD
-    goals: 2
-    assists: 25
-    points: 27
+    goals: 4
+    assists: 11
+    shots: 102
   -
-    name: Quinn Hughes
+    name: Jordie Benn
     position: LD
-    goals: 5
-    assists: 29
-    points: 34
+    goals: 0
+    assists: 6
+    shots: 50
   -
-    name: Jack Hughes
+    name: Troy Stecher
     position: RD
-    goals: 2
-    assists: 25
-    points: 27
+    goals: 3
+    assists: 6
+    shots: 55

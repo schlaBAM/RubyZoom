@@ -6,7 +6,7 @@ module Rubyzoom
     class PlayoffRace < Rubyzoom::Command
       def call(_args, _name)
         catalog = Catalogue.new
-        puts catalog.get_playoff_standings
+        puts catalog.playoff_standings
       end
 
       def self.help

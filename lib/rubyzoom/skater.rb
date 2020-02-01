@@ -9,7 +9,11 @@ class Skater < Player
     @shots = shots
   end
 
-  def get_shot_percentage
-    (@goals.to_f / @shots).round(2) * 100
+  def shot_percentage
+    ((@goals.to_f / @shots) * 100).round(2)
+  end
+
+  def to_s
+    "#{@name} (#{@goals}G, #{@assists}A, #{total_points}P) with a #{shot_percentage}% shot percentage.\n"
   end
 end

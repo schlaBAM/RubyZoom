@@ -11,7 +11,12 @@ class Goalie < Player
     @shots_against = shots_against
   end
 
-  def get_save_percentage
-    (@shots_against.to_f / @saves).round(3)
+  def save_percentage
+    (@saves.to_f / @shots_against).round(3)
   end
+
+  def to_s
+    "#{@name} has #{@wins} wins, #{@losses} losses. Of the #{@shots_against} shots faced, he has made #{@saves} saves giving him a #{save_percentage} save percentage.\n"
+  end
+
 end

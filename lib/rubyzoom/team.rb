@@ -29,21 +29,22 @@ class Team
     @players.sort_by!{|player| player.total_points}.reverse!
   end
 
+  def to_s
+    "#{@standings_position} - #{@name} (#{@record})\n"
+  end
+
   #future use - attribute was removed for now.
   def relocate_arena(new_location)
     @arena = new_location
   end
 
-  #TODO - improve + call check_roster_size
   def add_players(*new_players)
-
     new_players.each do |player|
       @players.push(player)
     end
     @players
   end
 
-  #TODO - improve + call check_roster_size
   def remove_player(player_name)
     @players.each_with_index do |player, index|
       if player.name == player_name
@@ -57,7 +58,7 @@ class Team
   def check_roster_size
     roster = Hash.new(0)
 
-    @team.players.each do |player|
+    @players.each do |player|
       case player.position
       when 'LW', 'C', 'RW'
         roster[:forward] += 1

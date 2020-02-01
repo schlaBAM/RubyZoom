@@ -20,3 +20,9 @@ CLI::UI::StdoutRouter.enable
 require 'minitest/autorun'
 require "minitest/unit"
 require 'mocha/minitest'
+
+require_relative '../lib/rubyzoom/catalogue'
+require_relative '../lib/rubyzoom/team'
+require_relative '../lib/rubyzoom/player'
+require_relative '../lib/rubyzoom/skater'
+require_relative '../lib/rubyzoom/goalie'
