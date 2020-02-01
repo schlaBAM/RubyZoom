@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 require_relative 'player'
 
 class Skater < Player
-
   attr_reader :shots
 
   def initialize(name, position, goals, assists, shots)

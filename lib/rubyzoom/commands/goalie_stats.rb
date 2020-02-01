@@ -1,10 +1,10 @@
+# frozen_string_literal: true
 require 'rubyzoom'
 require_relative '../../../lib/rubyzoom/catalogue'
 
 module Rubyzoom
   module Commands
     class GoalieStats < Rubyzoom::Command
-
       def call(_args, _name)
         catalog = Catalogue.new
         goalies = catalog.goalie_stats

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require_relative 'skater'
 require_relative '../rubyzoom/goalie'
 
@@ -5,7 +6,7 @@ class Team
   attr_reader :name, :division, :players
   attr_accessor :arena, :record, :standings_position
 
-  def initialize (name, division, record, position)
+  def initialize(name, division, record, position)
     @name = name
     @division = division
     @record = record
@@ -26,14 +27,14 @@ class Team
                                goalie['losses'], goalie['saves'], goalie['shots_against']))
     end
 
-    @players.sort_by!{|player| player.total_points}.reverse!
+    @players.sort_by!(&:total_points).reverse!
   end
 
   def to_s
     "#{@standings_position} - #{@name} (#{@record})\n"
   end
 
-  #future use - attribute was removed for now.
+  # future use - attribute was removed for now.
   def relocate_arena(new_location)
     @arena = new_location
   end
@@ -76,5 +77,4 @@ class Team
 
     forward_size >= 12 && defense_size >= 6 && goalie_size >= 1 && roster_size <= 23
   end
-
 end
