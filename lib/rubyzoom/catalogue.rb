@@ -1,19 +1,18 @@
+# frozen_string_literal: true
 require 'yaml'
 require_relative '../rubyzoom/team'
 
 class Catalogue
-
   attr_reader :team, :teams
 
   def initialize
-    file =  YAML.load_file('lib/rubyzoom/data.yml')['Team']
+    file = YAML.load_file('lib/rubyzoom/data.yml')['Team']
     @teams = []
     generate_teams(file)
-    @teams = @teams.sort_by{ |team| team.standings_position}
+    @teams = @teams.sort_by(&:standings_position)
     @team = generate_team
-      #@free_agents = generate_free_agents
+    # @free_agents = generate_free_agents
   end
-
 
   # -- Global Team Functions
   def playoff_standings
@@ -23,11 +22,11 @@ class Catalogue
   end
 
   def best_team
-    teams_to_string([@teams.min_by{|team| team.standings_position}])
+    teams_to_string([@teams.min_by(&:standings_position)])
   end
 
   def teams_from(division)
-    division_teams = @teams.select{|team| team.division == division}
+    division_teams = @teams.select { |team| team.division == division }
     teams_to_string(division_teams)
   end
 
@@ -35,23 +34,23 @@ class Catalogue
     "Current standings:\n#{teams_to_string(@teams)}"
   end
 
-  #Individual Team Functions
+  # Individual Team Functions
   def team_total_player_points
-    @team.players.reduce(0) {|sum, player| sum + player.total_points}
+    @team.players.reduce(0) { |sum, player| sum + player.total_points }
   end
 
   def best_player
-    best_player = @team.players.max_by {|player| player.total_points}
+    best_player = @team.players.max_by(&:total_points)
     players_to_string([best_player])
   end
 
   def bad_players
-    bad_players = @team.players.select {|player| player.total_points < 10 && player.position != 'G'}
+    bad_players = @team.players.select { |player| player.total_points < 10 && player.position != 'G' }
     players_to_string(bad_players)
   end
 
   def goalie_stats
-    @team.players.select {|player| player.class == Goalie}
+    @team.players.select { |player| player.class == Goalie }
   end
 
   private
@@ -86,8 +85,7 @@ class Catalogue
     result
   end
 
-  #def generate_free_agents
+  # def generate_free_agents
   #  #TODO - data still needs to be created
-  #end
-
+  # end
 end

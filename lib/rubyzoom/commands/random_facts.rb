@@ -1,11 +1,11 @@
+# frozen_string_literal: true
 require 'rubyzoom'
 require_relative '../../../lib/rubyzoom/catalogue'
 
 module Rubyzoom
   module Commands
     class RandomFacts < Rubyzoom::Command
-
-      def call(args, _name)
+      def call(_args, _name)
         catalog = Catalogue.new
         puts "\n----- Random Facts -----"
         puts "Top team in the league: #{catalog.best_team}"

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rubyzoom'
 require_relative '../../../lib/rubyzoom/catalogue'
 

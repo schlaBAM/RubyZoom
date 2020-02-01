@@ -1,12 +1,11 @@
+# frozen_string_literal: true
 require 'rubyzoom'
 require_relative '../../../lib/rubyzoom/catalogue'
-
 
 module Rubyzoom
   module Commands
     class Help < Rubyzoom::Command
-      def call(args, _name)
-
+      def call(_args, _name)
         catalogue = Catalogue.new
 
         puts "- Welcome to Be A GM -"
