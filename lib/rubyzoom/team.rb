@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require_relative 'skater'
-require_relative '../rubyzoom/goalie'
+require_relative 'goalie'
 
 class Team
   attr_reader :name, :division, :players
@@ -19,12 +19,21 @@ class Team
     skaters = YAML.load_file('lib/rubyzoom/data.yml')
 
     skaters['Skater'].each do |skater|
-      @players.push(Skater.new(skater['name'], skater['position'], skater['goals'], skater['assists'], skater['shots']))
+      @players.push(Skater.new(skater['name'], skater['position'], skater['goals'],
+                               skater['assists'], skater['shots']))
+    rescue StandardError => e
+      # ignored
+      puts 'There was an issue creating the player'
+      puts e.message
     end
 
     skaters['Goalie'].each do |goalie|
       @players.push(Goalie.new(goalie['name'], goalie['position'], goalie['goals'], goalie['assists'], goalie['wins'],
                                goalie['losses'], goalie['saves'], goalie['shots_against']))
+    rescue StandardError => e
+      # ignored
+      puts 'There was an issue creating the player'
+      puts e.message
     end
 
     @players.sort_by!(&:total_points).reverse!

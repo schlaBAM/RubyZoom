@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require 'yaml'
-require_relative '../rubyzoom/team'
+require_relative 'team'
 
 class Catalogue
   attr_reader :team, :teams
@@ -18,7 +18,8 @@ class Catalogue
   def playoff_standings
     result = @teams.partition { |team| team.standings_position <= 8 }
 
-    "\nCurrently in playoff position:\n#{teams_to_string(result[0])}\nOn the outside looking in:\n#{teams_to_string(result[1])}"
+    "\nCurrently in playoff position:\n#{teams_to_string(result[0])}
+On the outside looking in:\n#{teams_to_string(result[1])}"
   end
 
   def best_team
@@ -58,6 +59,10 @@ class Catalogue
   def generate_teams(file)
     file.each do |team|
       @teams.push(Team.new(team['name'], team['division'], team['record'], team['position']))
+    rescue StandardError => e
+      # ignored
+      puts 'There was an issue creating the player'
+      puts e.message
     end
   end
 

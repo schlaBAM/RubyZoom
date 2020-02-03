@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 begin
   addpath = lambda do |p|
     path = File.expand_path("../../#{p}", __FILE__)
@@ -21,6 +22,9 @@ CLI::UI::StdoutRouter.enable
 require 'minitest/autorun'
 require "minitest/unit"
 require 'mocha/minitest'
+
+require 'simplecov'
+SimpleCov.start
 
 require_relative '../lib/rubyzoom/catalogue'
 require_relative '../lib/rubyzoom/team'
