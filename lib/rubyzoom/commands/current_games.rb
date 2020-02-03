@@ -10,7 +10,8 @@ module Rubyzoom
       end
 
       def self.help
-        "Calls NHL's API to see if there are any hockey games on.\nUsage: {{command:#{Rubyzoom::TOOL_NAME} current_games}}"
+        "Calls NHL's API to see if there are any hockey games on.
+Usage: {{command:#{Rubyzoom::TOOL_NAME} current_games}}"
       end
     end
   end

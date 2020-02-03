@@ -16,6 +16,7 @@ class Goalie < Player
   end
 
   def to_s
-    "#{@name} has #{@wins} wins, #{@losses} losses. Of the #{@shots_against} shots faced, he has made #{@saves} saves giving him a #{save_percentage} save percentage.\n"
+    "#{@name} currently has #{@wins} wins, #{@losses} losses.
+Of the #{@shots_against} shots faced, he has made #{@saves} saves giving him a #{save_percentage} save percentage.\n"
   end
 end
